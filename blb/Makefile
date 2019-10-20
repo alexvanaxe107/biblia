@@ -1,5 +1,3 @@
-PREFIX = /usr/local
-
 ara: kjv.sh kjv.awk ara.tsv
 	cat kjv.sh > $@
 	echo 'exit 0' >> $@
