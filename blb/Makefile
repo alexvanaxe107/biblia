@@ -13,7 +13,7 @@ test: kjv.sh
 clean:
 	rm -f ara
 
-install: kjv
+install: ara
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f ara $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/ara
