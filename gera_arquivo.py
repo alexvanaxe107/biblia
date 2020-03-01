@@ -26,6 +26,7 @@ class Book(Base):
         "book_reference_id"     INTEGER,
         "testament_reference_id"        INTEGER,
         "name"  TEXT
+        "acronym"  TEXT
     );
     """
     __tablename__ = 'book'
@@ -34,6 +35,7 @@ class Book(Base):
     book_reference_id = Column(Integer)
     testament_reference_id = Column(Integer)
     name = Column(String)
+    acronym = Column(String)
 
     def __repr__(self):
        return "<Book(id='%s', ref='%s', refid='%s', name='%s')>" % (
@@ -109,7 +111,7 @@ def main():
     ara_file = open('./ara.tsv', 'w')
 
     for instance in session.query(Verse).order_by('book_id'):
-        ara_file.write('%s\t%s\t%s\t%s\t%s\t%s\n' % (instance.book.name, instance.book.name[0:3],
+        ara_file.write('%s\t%s\t%s\t%s\t%s\t%s\n' % (instance.book.name, instance.book.acronym,
                                                       instance.book_id, instance.chapter, instance.verse, instance.text))
 
 
