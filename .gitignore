@@ -3,3 +3,5 @@ __pycache__
 blb/ara
 tsv-generator/ara.tsv
 tsv-generator/arafortune
+blb/arafortune
+blb/arafortune.dat
