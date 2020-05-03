@@ -109,10 +109,12 @@ def main():
     session = Session()
 
     ara_file = open('./ara.tsv', 'w')
+    ara_fortune_file = open('./arafortune', 'w')
 
     for instance in session.query(Verse).order_by('book_id'):
         ara_file.write('%s\t%s\t%s\t%s\t%s\t%s\n' % (instance.book.name, instance.book.acronym,
                                                       instance.book_id, instance.chapter, instance.verse, instance.text))
+        ara_fortune_file.write('%s:\n%s:%s    %s\n%%\n' % (instance.book.name, instance.chapter, instance.verse, instance.text))
 
 
 if __name__ == "__main__":
