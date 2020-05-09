@@ -22,6 +22,6 @@ install: ara
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/ara
 	rm -f /usr/share/fortune/arafortune 
-	rm -f /usr/share/fortune/arafortune .dat
+	rm -f /usr/share/fortune/arafortune.dat
 
 .PHONY: test clean install uninstall
