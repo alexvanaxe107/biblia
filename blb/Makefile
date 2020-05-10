@@ -14,7 +14,7 @@ clean:
 
 install: ara
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	mkdir -p $(DESTDIR)$(PREFIX)/usr/share/fortune
+	mkdir -p $(DESTDIR)/usr/share/fortune
 	cp -f ara $(DESTDIR)$(PREFIX)/bin
 	cp -f arafortune $(DESTDIR)/usr/share/fortune
 	cp -f arafortune.dat $(DESTDIR)/usr/share/fortune
