@@ -14,15 +14,15 @@ clean:
 
 install: ara
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	mkdir -p $(DESTDIR)/usr/share/fortune
+	mkdir -p $(DESTDIR)/usr/share/fortune/ara
 	cp -f ara $(DESTDIR)$(PREFIX)/bin
-	cp -f arafortune $(DESTDIR)/usr/share/fortune
-	cp -f arafortune.dat $(DESTDIR)/usr/share/fortune
+	cp -f arafortune $(DESTDIR)/usr/share/fortune/ara
+	cp -f arafortune.dat $(DESTDIR)/usr/share/ara
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/ara
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/ara
-	rm -f $(DESTDIR)/usr/share/fortune/arafortune 
-	rm -f $(DESTDIR)/usr/share/fortune/arafortune.dat
+	rm -f $(DESTDIR)/usr/share/fortune/ara/arafortune 
+	rm -f $(DESTDIR)/usr/share/fortune/ara/arafortune.dat
 
 .PHONY: test clean install uninstall
