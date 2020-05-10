@@ -17,7 +17,7 @@ install: ara
 	mkdir -p $(DESTDIR)/usr/share/fortune/ara
 	cp -f ara $(DESTDIR)$(PREFIX)/bin
 	cp -f arafortune $(DESTDIR)/usr/share/fortune/ara
-	cp -f arafortune.dat $(DESTDIR)/usr/share/ara
+	cp -f arafortune.dat $(DESTDIR)/usr/share/fortune/ara
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/ara
 
 uninstall:
