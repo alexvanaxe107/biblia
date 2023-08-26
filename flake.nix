@@ -1,8 +1,6 @@
 {
   description = "A bible used on cli and on fortune.";
 
-  inputs.nixpkgs.url = "nixpkgs/nixos-23.05";
-
 
   outputs = { self, nixpkgs }:
     let
